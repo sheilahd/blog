@@ -2,3 +2,7 @@
   <strong><%= comment.name %> says:</strong>
   <%= comment.content %>
 </div>
+<div class="comment-admin">
+  <%= link_to "Edit", edit_post_comment_path(@post, comment) %>
+  <%= link_to "Delete", [@post, comment], method: :delete %>
+</div>
