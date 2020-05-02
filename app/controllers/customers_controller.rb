@@ -26,12 +26,19 @@ class CustomersController < ApplicationController
   # POST /customers
   # POST /customers.json
   def create
+
     @customer = Customer.new(customer_params)
     if @customer.save
     flash.notice = "The customer record was created successfully."
+    # @customer.first_name = params[:customer][:first_name]
+    # @customer.last_name = params[:customer][:last_name]
+    # @customer.phone = params[:customer][:phone]
+    # @customer.email = params[:customer][:email]
+
+
     redirect_to @customer
   else
-    flash.now.alert = @customer.errors.full_messages.to_sentence
+flash.now.alert = @customer.errors.full_messages.to_sentence
     render :new
   end
 
