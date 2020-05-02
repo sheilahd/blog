@@ -75,7 +75,9 @@ RSpec.describe "CustomersControllers", type: :request do
          it "deletes a customer record" do
             customer = FactoryBot.create(:customer)
             delete customer_path(customer.id)
-            expect(Customer.count).to eq(204)
+            expect change(Customer, :count).from(1).to eq(0)
+            expect(response.status).to eq(302)
+
          end
        end
     end
