@@ -91,19 +91,19 @@ flash.now.alert = @customer.errors.full_messages.to_sentence
 
   private
     # Use callbacks to share common setup or constraints between actions.
-    def set_customer
+  def set_customer
       @customer = Customer.find(params[:id])
-    end
+  end
 
     # Only allow a list of trusted parameters through.
-    def customer_params
+  def customer_params
       params.require(:customer).permit(:first_name, :last_name, :phone, :email)
-    end
+  end
 
-    def catch_not_found(e)
+  def catch_not_found(e)
       Rails.logger.debug("We had a not found exception.")
       flash.alert = e.to_s
       redirect_to customers_path
-    end
-
+  end
+    
 end
