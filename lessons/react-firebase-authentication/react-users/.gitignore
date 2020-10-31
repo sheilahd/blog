@@ -1,0 +1,32 @@
+# See https://help.github.com/articles/ignoring-files/ for more about ignoring files.
+
+# dependencies
+/node_modules
+/.pnp
+.pnp.js
+
+# testing
+/coverage
+
+# production
+/build
+
+# misc
+.DS_Store
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+REACT_APP_API_KEY=AIzaSyCHFWkBGJ6tY282H16Lzq2_qTwk476ce48,
+REACT_APP_AUTH_DOMAIN="first-firebase.firebaseapp.com",
+REACT_APP_DATABASE_URL="https://first-firebase.firebaseio.com",
+REACT_APP_PROJECT_ID="first-firebase-d291b",
+REACT_APP_STORAGE_BUCKET=xxxxXXXX.appspot.com
+REACT_APP_MESSAGING_SENDER_ID="first-firebase.appspot.com",
+
+  
